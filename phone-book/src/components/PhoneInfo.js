@@ -32,6 +32,13 @@ class PhoneInfo extends Component {
         });
     };
 
+    shouldComponentUpdate(nextProps, nextState, nextContext) {
+        if (!this.state.editing && !nextState.editing && nextProps.info === this.props.info)
+            return false;
+        else
+            return true;
+    }
+
     componentDidUpdate(prevProps, prevState, snapshot) {
         const { info, onUpdate } = this.props;
         if (!prevState.editing && this.state.editing) {
@@ -50,6 +57,7 @@ class PhoneInfo extends Component {
     }
 
     render() {
+        console.log('render PhoneInfo ' + this.props.info.id);
         const style = {
             border: '1px solid black',
             padding: '8px',

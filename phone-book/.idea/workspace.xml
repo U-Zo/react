@@ -29,6 +29,7 @@
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -53,6 +54,8 @@
       <option name="presentableId" value="Default" />
       <updated>1577336248546</updated>
       <workItem from="1577336251602" duration="5142000" />
+      <workItem from="1577783662783" duration="1833000" />
+      <workItem from="1577998816544" duration="19000" />
     </task>
     <servers />
   </component>
@@ -64,5 +67,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="697" y="310" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/113.-900.1600.860@0.0.1920.1040" timestamp="1577339591518" />
+    <state x="629" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1578314977553">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="629" y="343" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1578314977553" />
   </component>
 </project>

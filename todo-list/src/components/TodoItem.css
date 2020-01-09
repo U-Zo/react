@@ -11,7 +11,7 @@
     background: #e3fafc;
 }
 
-.todo-tiem:hover, .remove {
+.todo-item:hover .remove {
     opacity: 1;
 }
 

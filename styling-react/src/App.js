@@ -1,11 +1,11 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import SassComponent from "./SassComponent";
+import CSSModules from "./CSSModule";
+import StyledComponent from "./StyledComponent";
 
 const App = () => {
     return (
-        <SassComponent/>
+        <StyledComponent/>
     );
 };
 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8134f308-e6ec-4606-9852-a9dbf36c4b97" name="Default Changelist" comment="" />
+    <list default="true" id="29d43118-55d9-41a8-b578-d10ab799a01f" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -12,17 +12,10 @@
       <executable />
     </execution>
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="CSS File" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectId" id="1W1VQUKdp35actyIlV2VupiZSwH" />
+  <component name="ProjectId" id="1WJiUD58Cao9klzHwmZEtFgSq15" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -32,8 +25,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../todo-list" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -55,18 +47,12 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="8134f308-e6ec-4606-9852-a9dbf36c4b97" name="Default Changelist" comment="" />
-      <created>1578317071451</created>
+      <changelist id="29d43118-55d9-41a8-b578-d10ab799a01f" name="Default Changelist" comment="" />
+      <created>1578874111758</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1578317071451</updated>
-      <workItem from="1578317073188" duration="2785000" />
-      <workItem from="1578456520076" duration="639000" />
-      <workItem from="1578467218801" duration="3334000" />
-      <workItem from="1578762165786" duration="4316000" />
-      <workItem from="1578780538450" duration="603000" />
-      <workItem from="1578874101481" duration="10000" />
-      <workItem from="1578874182983" duration="9000" />
+      <updated>1578874111758</updated>
+      <workItem from="1578874113426" duration="749000" />
     </task>
     <servers />
   </component>
@@ -74,17 +60,9 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="720" y="309" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1578762277831">
+    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1578874180485">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="720" y="309" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1578762277831" />
-    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1578874109837">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1578874109837" />
-    <state x="629" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1578874103474">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="629" y="343" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1578874103474" />
+    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1578874180485" />
   </component>
 </project>

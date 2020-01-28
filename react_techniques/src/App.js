@@ -1,12 +1,12 @@
-import React from 'react';
-import ValidationSample from "./ValidationSample";
+import React, {Component} from 'react';
+import IterationSample from "./IterationSample";
 
-function App() {
-    return (
-        <div>
-          <ValidationSample></ValidationSample>
-        </div>
-    );
+class App extends Component {
+    render() {
+        return (
+            <IterationSample/>
+        );
+    }
 }
 
 export default App;

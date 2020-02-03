@@ -9,16 +9,19 @@ const App = () => {
         uselessValue: null
     });
 
+    // input 수정하기 위한 함수
     const onChange = useCallback(
         e => {
             const {name, value} = e.target;
-            setForm({
-                ...form,
-                [name]: [value]
-            });
+            setForm(
+                produce(draft => {
+                    draft[name] = value;
+                })
+            );
         }, [form]
     );
 
+    // form 등록하기 위한 함수
     const onSubmit = useCallback(
         e => {
             e.preventDefault();
@@ -28,10 +31,12 @@ const App = () => {
                 username: form.username
             };
 
-            setData({
-                ...data,
-                array: data.array.concat(info)
-            });
+            // array 새 항목 등록
+            setData(
+                produce(draft => {
+                    draft.array.push(info);
+                })
+            );
 
             // form 초기화
             setForm({
@@ -45,25 +50,28 @@ const App = () => {
     // 항목을 삭제하는 함수
     const onRemove = useCallback(
         id => {
-            setData({
-                ...data,
-                array: data.array.filter(info => info.id !== id)
-            });
+            setData(
+                produce(draft => {
+                    draft.array.splice(draft.array.findIndex(info => info.id === id), 1);
+                })
+            );
         }, [data]
     );
 
     return (
         <div>
             <form onSubmit={onSubmit}>
-                <input name="username"
-                       placeholder="아이디"
-                       value={form.username}
-                       onChange={onChange}
+                <input
+                    name="username"
+                    placeholder="아이디"
+                    value={form.username}
+                    onChange={onChange}
                 />
-                <input name="name"
-                       placeholder="이름"
-                       value={form.name}
-                       onChange={onChange}
+                <input
+                    name="name"
+                    placeholder="이름"
+                    value={form.name}
+                    onChange={onChange}
                 />
                 <button type="submit">등록</button>
             </form>

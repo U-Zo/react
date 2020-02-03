@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/routing.iml" filepath="$PROJECT_DIR$/.idea/routing.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/router-tutorial.iml" filepath="$PROJECT_DIR$/.idea/router-tutorial.iml" />
     </modules>
   </component>
 </project>

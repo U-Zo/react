@@ -1,12 +1,10 @@
-import React, {Component} from 'react';
-import IterationSample from "./IterationSample";
+import React, {useState} from "react";
+import InfoCustomHooks from "./InfoCustomHooks";
 
-class App extends Component {
-    render() {
-        return (
-            <IterationSample/>
-        );
-    }
-}
+const App = () => {
+    return (
+        <InfoCustomHooks/>
+    );
+};
 
 export default App;

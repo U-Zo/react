@@ -42,7 +42,7 @@ const NewsList = ({category}) => {
             setLoading(false);
         };
         fetchData();
-    }, []);
+    }, [category]);
 
     // 대기중
     if (loading) {
@@ -58,7 +58,7 @@ const NewsList = ({category}) => {
     return (
         <NewsListBlock>
             {articles.map(article => (
-                <NewsItem Key={article.url} article={article}/>
+                <NewsItem key={article.url} article={article}/>
             ))}
         </NewsListBlock>
     );

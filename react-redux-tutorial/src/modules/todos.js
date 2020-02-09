@@ -63,6 +63,11 @@ function todos(state = initialState, action) {
                 todo.id === action.id ? {...todo, done: !todo.done} : todo
                 )
             };
+        case REMOVE:
+            return {
+                ...state,
+                todos: state.todos.filter(todo => todo.id !== action.id)
+            }
         default:
             return state;
     }

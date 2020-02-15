@@ -14,8 +14,15 @@ const SampleContainer = ({
                          }) => {
     // 클래스 형태 컴포넌트면 componentDidMount
     useEffect(() => {
-        getPost(1);
-        getUsers(1);
+        const fn = async () => {
+            try {
+                await getPost(1);
+                await getUsers(1);
+            } catch (e) {
+                console.log(e); // 에러 조회
+            }
+        };
+        fn();
     }, [getPost, getUsers]);
 
     return (

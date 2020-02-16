@@ -26,7 +26,7 @@ function* decreaseSaga() {
 }
 
 export function* counterSaga() {
-    // takeEvery는 들어오느 모든 액션에 대해 특정 작업 처리
+    // takeEvery는 들어오는 모든 액션에 대해 특정 작업 처리
     yield takeEvery(INCREASE_ASYNC, increaseSaga);
     // takeLatest는 기존에 진행 중이던 작업 취소
     // 가장 마지막으로 실행된 작업 수행

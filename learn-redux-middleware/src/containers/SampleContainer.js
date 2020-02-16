@@ -17,7 +17,7 @@ const SampleContainer = ({
         const fn = async () => {
             try {
                 await getPost(1);
-                await getUsers(1);
+                await getUsers();
             } catch (e) {
                 console.log(e); // 에러 조회
             }

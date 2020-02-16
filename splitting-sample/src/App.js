@@ -3,7 +3,9 @@ import logo from './logo.svg';
 import './App.css';
 import loadable from "@loadable/component";
 
-const SplitMe = loadable(() => import('./SplitMe'));
+const SplitMe = loadable(() => import('./SplitMe'), {
+    fallback: <div>loading...</div>
+});
 
 const App = () => {
     const [visible, setVisible] = useState(false);
@@ -11,11 +13,15 @@ const App = () => {
         setVisible(true);
     };
 
+    const onMouseOver = () => {
+        SplitMe.preload();
+    };
+
     return (
         <div className="App">
             <header className="App-header">
                 <img src={logo} className="App-logo" alt="logo"/>
-                <p onClick={onClick}>Hello React!</p>
+                <p onClick={onClick} onMouseOver={onMouseOver}>Hello React!</p>
                 {visible && <SplitMe/>}
             </header>
         </div>

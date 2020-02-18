@@ -1,11 +1,17 @@
+const nodeExternals = require('webpack-node-externals');
 const paths = require('./paths');
 const getCSSModuleLocalIdent = require('react-dev-utils/getCSSModuleLocalIdent'); // CSS
+const webpack = require('webpack');
+const getClientEnvironment = require('./env');
 // Module의 고유 className을 만들 때 필요한 옵션
 
 const cssRegex = /\.css$/;
 const cssModuleRegex = /\.modul\.css$/;
 const sassRegex = /\.(scss|sass)$/;
 const sassModuleRegex = /\.module\.(scss|sass)$/;
+
+const publicUrl = paths.publicUrlOrPath.slice(0, -1);
+const env = getClientEnvironment(publicUrl);
 
 module.exports = {
     mode: 'production', // 프로덕션 모드로 설정하여 최적화 옵션들을 활성화
@@ -15,7 +21,7 @@ module.exports = {
         path: paths.ssrBuild, // 빌드 경로
         filename: "server.js", // 파일 이름
         chunkFilename: "js/[name].chunk.js", // 청크 파일 이름
-        publicPath: "paths.servedPath" // 정적 파일이 제공될 경로
+        publicPath: paths.publicUrlOrPath // 정적 파일이 제공될 경로
     },
     module: {
         rules: [
@@ -52,10 +58,10 @@ module.exports = {
                     {
                         test: cssRegex,
                         exclude: cssModuleRegex,
-                        // exportOnlyLocals: true 옵션을 설정해야 실제 CSS 파일을 생성하지 않음
+                        // onlyLocals: true 옵션을 설정해야 실제 CSS 파일을 생성하지 않음
                         loader: require.resolve('css-loader'),
                         options: {
-                            exportOnlyLocals: true
+                            onlyLocals: true
                         }
                     },
                     // CSS Module을 위한 처리
@@ -64,7 +70,7 @@ module.exports = {
                         loader: require.resolve('css-loader'),
                         options: {
                             modules: true,
-                            exportOnlyLocals: true,                            getLocalIdent: getCSSModuleLocalIdent
+                            onlyLocals: true,                            getLocalIdent: getCSSModuleLocalIdent
                         }
                     },
                     // Sass를 위한 처리
@@ -75,7 +81,7 @@ module.exports = {
                             {
                                 loader: require.resolve('css-loader'),
                                 options: {
-                                    exportOnlyLocals: true
+                                    onlyLocals: true
                                 }
                             },
                             require.resolve('sass-loader')
@@ -90,7 +96,7 @@ module.exports = {
                                 loader: require.resolve('css-loader'),
                                 options: {
                                     modules: true,
-                                    exportOnlyLocals: true,
+                                    onlyLocals: true,
                                     getLocalIdent: getCSSModuleLocalIdent
                                 }
                             },
@@ -124,5 +130,9 @@ module.exports = {
     },
     resolve: {
         modules: ['node_modules']
-    }
+    },
+    externals: [nodeExternals()],
+    plugins: [
+        new webpack.DefinePlugin(env.stringified) // 환경변수 주입
+    ]
 };

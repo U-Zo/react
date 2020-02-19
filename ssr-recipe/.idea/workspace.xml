@@ -54,7 +54,9 @@
       <option name="presentableId" value="Default" />
       <updated>1581846597247</updated>
       <workItem from="1581846599854" duration="2538000" />
-      <workItem from="1582021932682" duration="4661000" />
+      <workItem from="1582021932682" duration="4844000" />
+      <workItem from="1582035264505" duration="3000" />
+      <workItem from="1582107495898" duration="5237000" />
     </task>
     <servers />
   </component>
@@ -62,6 +64,14 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="640" y="255" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1582035227855">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="640" y="255" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1582035227855" />
+    <state x="629" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1582107495803">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="629" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1582107495803" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1581848622367">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

@@ -28,6 +28,7 @@
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="yarn" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="SvnConfiguration">
@@ -40,7 +41,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1584594181841</updated>
-      <workItem from="1584594185822" duration="532000" />
+      <workItem from="1584594185822" duration="2542000" />
     </task>
     <servers />
   </component>
@@ -52,5 +53,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="629" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1584594185827" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1584596303443">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1584596303443" />
   </component>
 </project>

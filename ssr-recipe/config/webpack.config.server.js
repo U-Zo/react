@@ -57,10 +57,10 @@ module.exports = {
                     {
                         test: cssRegex,
                         exclude: cssModueRegex,
-                        // exportOnlyLocals: true 옵션을 설정해야 실제 CSS 파일을 생성하지 않음
+                        // onlyLocals: true 옵션을 설정해야 실제 CSS 파일을 생성하지 않음
                         loader: require.resolve('css-loader'),
                         options: {
-                            exportOnlyLocals: true
+                            onlyLocals: true
                         }
                     },
                     // CSS Module을 위한 처리
@@ -69,7 +69,7 @@ module.exports = {
                         loader: require.resolve('css-loader'),
                         options: {
                             modules: true,
-                            exportOnlyLocals: true,
+                            onlyLocals: true,
                             getLocalIdent: getCSSModuleLocalIdent
                         }
                     },
@@ -81,7 +81,7 @@ module.exports = {
                             {
                                 loader: require.resolve('css-loader'),
                                 options: {
-                                    exportOnlyLocals: true
+                                    onlyLocals: true
                                 }
                             },
                             require.resolve('sass-loader')
@@ -96,7 +96,7 @@ module.exports = {
                                 loader: require.resolve('css-loader'),
                                 options: {
                                     modules: true,
-                                    exportOnlyLocals: true,
+                                    onlyLocals: true,
                                     getLocalIdent: getCSSModuleLocalIdent
                                 }
                             },

@@ -8,8 +8,10 @@ import fs from 'fs';
 import {createStore, applyMiddleware} from 'redux';
 import {Provider} from 'react-redux';
 import thunk from 'redux-thunk';
-import rootReducer from './modules';
+import createSagaMiddleware from 'redux-saga';
+import rootReducer, {rootSaga} from './modules';
 import PreloadContext from './lib/PreloadContext';
+import {END} from 'redux-saga';
 
 // asset-manifest.json에서 파일 경로들을 조회
 const manifest = JSON.parse(
@@ -52,11 +54,13 @@ const app = express();
 const serverRender = async (req, res, next) => {
     // 이 함수는 404가 떠야 하는 상황에 404를 띄우지 않고 서버 사이드 렌더링을 해 줌
     const context = {};
-    const store = createStore(rootReducer, applyMiddleware(thunk));
+    const sagaMiddleware = createSagaMiddleware();
+    const store = createStore(rootReducer, applyMiddleware(thunk, sagaMiddleware));
     const preloadContext = {
         done: false,
         promises: []
     };
+    const sagaPromise = sagaMiddleware.run(rootSaga).toPromise();
     const jsx = (
         <PreloadContext.Provider value={preloadContext}>
             <Provider store={store}>
@@ -68,8 +72,10 @@ const serverRender = async (req, res, next) => {
     );
 
     ReactDOMServer.renderToStaticMarkup(jsx); // renderToStaticMarkup 으로 한 번 렌더링
+    store.dispatch(END);
 
     try {
+        await sagaPromise; // 기존에 진행 중이던 saga 들이 모두 끝날 때까지 기다림
         await Promise.all(preloadContext.promises); // 모든 프로미스를 기다림
     } catch (e) {
         return res.status(500);

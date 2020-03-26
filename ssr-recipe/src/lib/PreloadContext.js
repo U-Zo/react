@@ -5,7 +5,7 @@ import {createContext, useContext} from 'react';
 const PreloadContext = createContext(null);
 export default PreloadContext;
 
-//resolve는 함수 타입임
+// resolve는 함수 타입임
 export const Preloader = ({resolve}) => {
     const preloadContext = useContext(PreloadContext);
     if (!preloadContext) return null; // context 값이 유효하지 않으면 아무것도 하지 않음

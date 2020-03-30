@@ -50,7 +50,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1585209603383</updated>
-      <workItem from="1585209604964" duration="8090000" />
+      <workItem from="1585209604964" duration="9075000" />
+      <workItem from="1585557728764" duration="645000" />
     </task>
     <servers />
   </component>
@@ -62,5 +63,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="713" y="310" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1585215549897" />
+    <state x="629" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1585557728490">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="629" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585557728490" />
   </component>
 </project>

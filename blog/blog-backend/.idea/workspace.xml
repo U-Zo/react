@@ -51,7 +51,7 @@
       <option name="presentableId" value="Default" />
       <updated>1585209603383</updated>
       <workItem from="1585209604964" duration="9075000" />
-      <workItem from="1585557728764" duration="645000" />
+      <workItem from="1585557728764" duration="1581000" />
     </task>
     <servers />
   </component>
@@ -67,5 +67,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="629" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585557728490" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1585559043927">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1585559043927" />
   </component>
 </project>

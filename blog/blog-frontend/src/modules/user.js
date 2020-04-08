@@ -36,6 +36,7 @@ function* logoutSaga() {
 export function* userSaga() {
     yield takeLatest(CHECK, checkSaga);
     yield takeLatest(CHECK_FAILURE, checkFailureSaga);
+    yield takeLatest(LOGOUT, logoutSaga);
 }
 
 const initialState = {

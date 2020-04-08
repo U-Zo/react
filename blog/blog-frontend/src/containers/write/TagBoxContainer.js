@@ -18,3 +18,5 @@ const TagBoxContainer = () => {
 
     return <TagBox onChangeTags={onChangeTags} tags={tags}/>;
 };
+
+export default TagBoxContainer;

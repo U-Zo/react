@@ -15,5 +15,21 @@ const SubInfoBlock = styled.div`
     color: ${palette.gray[4]};
     padding-left: 0.25rem;
     padding-right: 0.25rem;
+    content: ''; // 가웃뎃 점 문자
   }
 `;
+
+const SubInfo = ({username, publishedDate, hasMarginTop}) => {
+  return (
+      <SubInfoBlock hasMarginTop={hasMarginTop}>
+        <span>
+          <b>
+            <Link to={`/@${username}`}>{username}</Link>
+          </b>
+        </span>
+        <span>{new Date(publishedDate).toLocaleDateString()}</span>
+      </SubInfoBlock>
+  );
+};
+
+export default SubInfo;

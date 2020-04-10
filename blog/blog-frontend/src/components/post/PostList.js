@@ -53,7 +53,7 @@ const PostItem = ({post}) => {
                 publishedDate={new Date(publishedDate)}
             />
             <Tags tags={tags}/>
-            <p>{body}</p>
+            <p dangerouslySetInnerHTML={{__html: body}}/>
         </PostItemBlock>
     );
 };

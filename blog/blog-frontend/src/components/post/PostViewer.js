@@ -25,7 +25,7 @@ const PostContent = styled.div`
   color: ${palette.gray[8]};
 `;
 
-const PostViewer = ({post, error, loading}) => {
+const PostViewer = ({post, error, loading, actionButtons}) => {
     if (error) {
         if (error.response && error.response.data === 404) {
             return <PostViewerBlock>존재하지 않는 포스트입니다.</PostViewerBlock>
@@ -49,6 +49,7 @@ const PostViewer = ({post, error, loading}) => {
                 />
                 <Tags tags={tags}/>
             </PostHead>
+            {actionButtons}
             <PostContent
                 dangerouslySetInnerHTML={{__html: body}} // 태그 적용을 위한 요소 사용
             />

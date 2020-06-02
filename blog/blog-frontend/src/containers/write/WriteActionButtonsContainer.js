@@ -42,10 +42,6 @@ const WriteActionButtonsContainer = ({history}) => {
             history.push(`/@${user.username}/${_id}`);
         }
         if (postError) {
-            if (postError.response.status === 401) {
-                alert('로그인을 해주세요.');
-                history.push('/login');
-            }
             console.log(postError);
         }
     }, [history, post, postError]);

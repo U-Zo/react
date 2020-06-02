@@ -1,4 +1,4 @@
-import Joi from 'joi';
+import Joi from '@hapi/joi';
 import User from '../../models/user';
 
 export const register = async ctx => {
@@ -11,7 +11,7 @@ export const register = async ctx => {
             .required(),
         password: Joi.string().required()
     });
-    const result = Joi.validate(ctx.request.body, schema);
+    const result = schema.validate(ctx.request.body);
     if (result.error) {
         ctx.status = 400;
         ctx.body = result.error;

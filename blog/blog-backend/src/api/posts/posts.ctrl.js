@@ -1,6 +1,6 @@
 import Post from '../../models/post';
 import mongoose from 'mongoose';
-import Joi from 'joi'; // Validation plugin
+import Joi from '@hapi/joi'; // Validation plugin
 import sanitizeHtml from 'sanitize-html';
 
 const {ObjectId} = mongoose.Types;
@@ -61,7 +61,7 @@ export const write = async ctx => {
     });
 
     // 검증하고 나서 검증 실패인 경우 에러 처리
-    const result = Joi.validate(ctx.request.body, schema);
+    const result = schema.validate(ctx.request.body);
     if (result.error) {
         ctx.status = 400; // Bad Request
         ctx.body = result.error;
@@ -152,14 +152,14 @@ export const update = async ctx => {
     });
 
     // 검증하고 나서 검증 실패인 경우 에러 처리
-    const result = Joi.validate(ctx.request.body, schema);
+    const result = schema.validate(ctx.request.body);
     if (result.error) {
         ctx.status = 400; // Bad request
         ctx.body = result.error;
         return;
     }
 
-    const nextData = [...ctx.request.body]; // 객체 복사
+    const nextData = {...ctx.request.body}; // 객체 복사
     // body 값이 주어지면 HTML 필터링
     if (nextData.body) {
         nextData.body = sanitizeHtml(nextData.body);

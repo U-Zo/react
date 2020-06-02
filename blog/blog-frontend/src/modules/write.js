@@ -43,6 +43,7 @@ export const updatePost = createAction(
 // 사가 생성
 const writePostSaga = createRequestSaga(WRITE_POST, postsAPI.writePost);
 const updatePostSaga = createRequestSaga(UPDATE_POST, postsAPI.updatePost);
+
 export function* writeSaga() {
     yield takeLatest(WRITE_POST, writePostSaga);
     yield takeLatest(UPDATE_POST, updatePostSaga);

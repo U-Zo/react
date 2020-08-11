@@ -14,10 +14,10 @@ const TodoTemplateBlock = styled.div`
   border-radius: 16px;
 `;
 
-const TodoTemplate = () => {
+const TodoTemplate = ({children}) => {
     return (
         <TodoTemplateBlock>
-            <TodoList/>
+            {children}
         </TodoTemplateBlock>
     );
 };

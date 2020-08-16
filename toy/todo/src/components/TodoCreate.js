@@ -1,12 +1,14 @@
-import React, {useState} from 'react';
-import styled, {css} from 'styled-components';
-import {MdAdd} from 'react-icons/md/index';
+import React, { useState } from 'react';
+import styled, { css } from 'styled-components';
+import { MdAdd } from 'react-icons/md/index';
 
 const CircleButton = styled.button`
   background: #38d9a9;
+  
   &:hover {
     background: #63e6be;
   }
+  
   &:active {
     background: #20c997;
   }
@@ -27,8 +29,8 @@ const CircleButton = styled.button`
   outline: none;
   align-items: center;
   justify-content: center;
-
   transition: 0.125s all ease-in;
+  
   ${props =>
     props.open &&
     css`
@@ -56,7 +58,6 @@ const InsertForm = styled.form`
   padding-top: 32px;
   padding-right: 32px;
   padding-bottom: 72px;
-
   border-bottom-left-radius: 16px;
   border-bottom-right-radius: 16px;
   border-top: 1px solid #e9ecef;
@@ -72,17 +73,18 @@ const Input = styled.input`
   box-sizing: border-box;
 `;
 
-const TodoCreate = ({onInsert}) => {
+const TodoCreate = ({ onCreate }) => {
     const [open, setOpen] = useState(false);
-    const [value, setValue] = useState('')
+    const [value, setValue] = useState('');
+
     const onToggle = () => setOpen(!open);
-    const onChange = (e) => {
-        setValue(e.target.value);
-    }
-    const onSubmit = (e) => {
-        onInsert(value);
+    const onChange = e => setValue(e.target.value);
+
+    const onSubmit = e => {
         e.preventDefault();
+        onCreate(value);
         setValue('');
+        setOpen(false);
     };
 
     return (

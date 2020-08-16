@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import TodoList from './TodoList';
 
 const TodoTemplateBlock = styled.div`
   display: flex;
@@ -14,7 +13,7 @@ const TodoTemplateBlock = styled.div`
   border-radius: 16px;
 `;
 
-const TodoTemplate = ({children}) => {
+const TodoTemplate = ({ children }) => {
     return (
         <TodoTemplateBlock>
             {children}
